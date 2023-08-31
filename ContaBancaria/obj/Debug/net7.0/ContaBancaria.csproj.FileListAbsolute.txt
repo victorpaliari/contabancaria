@@ -12,3 +12,18 @@ C:\Users\victo\OneDrive\Área de Trabalho\contabancaria\ContaBancaria\obj\Debug\
 C:\Users\victo\OneDrive\Área de Trabalho\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.pdb
 C:\Users\victo\OneDrive\Área de Trabalho\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.genruntimeconfig.cache
 C:\Users\victo\OneDrive\Área de Trabalho\contabancaria\ContaBancaria\obj\Debug\net7.0\ref\ContaBancaria.dll
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\bin\Debug\net7.0\ContaBancaria.exe
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\bin\Debug\net7.0\ContaBancaria.deps.json
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\bin\Debug\net7.0\ContaBancaria.runtimeconfig.json
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\bin\Debug\net7.0\ContaBancaria.dll
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\bin\Debug\net7.0\ContaBancaria.pdb
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.csproj.AssemblyReference.cache
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.AssemblyInfo.cs
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.dll
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\refint\ContaBancaria.dll
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.pdb
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ContaBancaria.genruntimeconfig.cache
+C:\Users\Pichau\Desktop\contabancaria\ContaBancaria\obj\Debug\net7.0\ref\ContaBancaria.dll

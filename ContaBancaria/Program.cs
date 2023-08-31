@@ -127,6 +127,7 @@
 
         static void Sobre()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\n*********************************************************");
             Console.WriteLine("Projeto Desenvolvido por: Victor Paliari.");
             Console.WriteLine("Victor - victorrpaliari@gmail.com");
