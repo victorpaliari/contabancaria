@@ -1,4 +1,6 @@
-﻿namespace ContaBancaria
+﻿using ContaBancaria.Model;
+
+namespace ContaBancaria
 {
     internal class Program
 
@@ -10,13 +12,27 @@
 
             int opcao;
 
+            Conta c1 = new Conta(1, 123, 1, "Gaspar", 1000000.00M);
+
+            c1.Visualizar();
+            c1.SetNumero(345);
+            c1.SetTipo(2);
+            c1.Visualizar();
+            c1.Sacar(1000);
+            c1.Visualizar();
+            c1.Depositar(5000);
+            c1.Visualizar();
+
+
+
+
             while (true)
             {
                 Console.BackgroundColor = ConsoleColor.DarkCyan;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("*****************************************************");
                 Console.WriteLine("                                                     ");
-                Console.WriteLine("                BANCO SEGURO - VOCÊ SEGURO.          ");
+                Console.WriteLine("                   BANCO VIBANK                      ");
                 Console.WriteLine("                                                     ");
                 Console.WriteLine("*****************************************************");
                 Console.WriteLine("                                                     ");
