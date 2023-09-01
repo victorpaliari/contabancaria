@@ -16,14 +16,19 @@ namespace ContaBancaria.Model
         private decimal saldo;
 
         //metodo construtor
-        public Conta(int id, int agencia, int tipo, string titular, decimal saldo)
+        public Conta(int numero, int agencia, int tipo, string titular, decimal saldo)
         {
-            this.numero = id;
+            this.numero = numero;
             this.agencia = agencia;
             this.tipo = tipo;
             this.titular = titular;
             this.saldo = saldo;
         }
+
+        //Polimorfismo de sobrecarga = quando eu crio um método dentro da minha superclasse
+        public Conta() { }
+        //Usa uma assinatura diferente do método, no caso abaixo está vazio, logo != da assinatura da superclasse
+        //Método vazio = pode ser usado para fazer testes/validações
 
         //Métodos Get e Set
         public int GetNumero()
@@ -79,7 +84,9 @@ namespace ContaBancaria.Model
         {
             this.saldo = saldo;
         }
-        public bool Sacar(decimal valor)
+
+        //O método Sacar() foi herdado daqui e sobreescrito em ContaCorrente = Polimorfismo de sobreescrita
+        public virtual bool Sacar(decimal valor)
         {
             if (this.saldo < valor)
             {
@@ -96,7 +103,7 @@ namespace ContaBancaria.Model
             this.SetSaldo(this.saldo + valor);
         }
         
-        public void Visualizar()
+        public virtual void Visualizar()
         {
             string tipo = string.Empty;
 
