@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ContaBancaria.Model
 {
-    public class Conta
+    public abstract class Conta
     {
         private int numero;
         private int agencia;
@@ -26,7 +26,7 @@ namespace ContaBancaria.Model
         }
 
         //Polimorfismo de sobrecarga = quando eu crio um método dentro da minha superclasse
-        public Conta() { }
+      
         //Usa uma assinatura diferente do método, no caso abaixo está vazio, logo != da assinatura da superclasse
         //Método vazio = pode ser usado para fazer testes/validações
 
