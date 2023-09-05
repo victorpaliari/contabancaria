@@ -1,4 +1,6 @@
-﻿namespace ContaBancaria
+﻿using ContaBancaria.Model;
+
+namespace ContaBancaria
 {
     internal class Program
 
@@ -10,13 +12,23 @@
 
             int opcao;
 
+            ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Samantha", 100000000.00M, 1000.00M);
+            cc1.Visualizar();
+            cc1.Sacar(200000000.00M);
+            cc1.Visualizar();
+            cc1.Depositar(50);
+            cc1.Visualizar();
+
+            ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Victor", 8000000.00M, 30);
+            cp1.Visualizar();
+
             while (true)
             {
                 Console.BackgroundColor = ConsoleColor.DarkCyan;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("*****************************************************");
                 Console.WriteLine("                                                     ");
-                Console.WriteLine("                BANCO SEGURO - VOCÊ SEGURO.          ");
+                Console.WriteLine("                   BANCO VIBANK                      ");
                 Console.WriteLine("                                                     ");
                 Console.WriteLine("*****************************************************");
                 Console.WriteLine("                                                     ");
@@ -127,6 +139,7 @@
 
         static void Sobre()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\n*********************************************************");
             Console.WriteLine("Projeto Desenvolvido por: Victor Paliari.");
             Console.WriteLine("Victor - victorrpaliari@gmail.com");
