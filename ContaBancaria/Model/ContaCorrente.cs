@@ -9,9 +9,11 @@ namespace ContaBancaria.Model
 {
     public class ContaCorrente : Conta
     {
+        //é acessível apenas dentro da Classe ContaCorrente.
         private decimal limite;
 
-        public ContaCorrente(int numero, int agencia, int tipo, string titular, decimal saldo, decimal limite)
+        public ContaCorrente(int numero, int agencia, int tipo, string titular, 
+                decimal saldo, decimal limite)
             : base(numero, agencia, tipo, titular, saldo)
         {
             this.limite = limite;

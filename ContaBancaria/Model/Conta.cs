@@ -9,6 +9,7 @@ namespace ContaBancaria.Model
 {
     public abstract class Conta
     {
+        //private para poder implementar o encapsulamento
         private int numero;
         private int agencia;
         private int tipo;
@@ -18,6 +19,8 @@ namespace ContaBancaria.Model
         //metodo construtor
         public Conta(int numero, int agencia, int tipo, string titular, decimal saldo)
         {
+            //this.numero = atributo da classe 
+            //numero = parâmetro do metodo construtor
             this.numero = numero;
             this.agencia = agencia;
             this.tipo = tipo;
@@ -107,7 +110,7 @@ namespace ContaBancaria.Model
         {
             string tipo = string.Empty;
 
-            switch (this.tipo)
+            switch (this.GetTipo())
             {
                 case 1: tipo = "Conta Corrente";
                     break;
