@@ -11,22 +11,22 @@ namespace ContaBancaria
         static void Main(string[] args)
         {
             ContaController contas = new();
-            int opcao, agencia, tipo, aniversario, numero;
+            int opcao, agencia, tipo, aniversario, numero, valor, numeroDestino;
             string? titular;
             decimal saldo, limite;
 
             Console.WriteLine("\nCriar Contas\n");
 
-            ContaCorrente cc1 = new(contas.GerarNumero(), 123, 1, "Vivian", 1000M, 100.0M);
+            ContaCorrente cc1 = new(contas.GerarNumero(), 123, 1, "Vivian", 20000000M, 100.0M);
             contas.Cadastrar(cc1);
 
-            ContaCorrente cc2 = new(contas.GerarNumero(), 124, 1, "Claudiane", 2000M, 100.0M);
+            ContaCorrente cc2 = new(contas.GerarNumero(), 124, 1, "Claudiane", 20000000M, 100.0M);
             contas.Cadastrar(cc2);
 
-            ContaPoupanca cp1 = new(contas.GerarNumero(), 125, 2, "Mayara", 4000M, 12);
+            ContaPoupanca cp1 = new(contas.GerarNumero(), 125, 2, "Mayara", 20000000M, 12);
             contas.Cadastrar(cp1);
 
-            ContaPoupanca cp2 = new(contas.GerarNumero(), 125, 2, "Victor", 8000M, 15);
+            ContaPoupanca cp2 = new(contas.GerarNumero(), 125, 2, "Victor", 20000000M, 15);
             contas.Cadastrar(cp2);
 
             contas.ListarTodas();
@@ -194,6 +194,11 @@ namespace ContaBancaria
                         Console.WriteLine("Apagar a Conta\n\n");
                         Console.ResetColor();
 
+                        Console.WriteLine("Digite o número da Conta: ");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        contas.Deletar(numero);
+
                         KeyPress();
                         break;
 
@@ -205,7 +210,11 @@ namespace ContaBancaria
                         Console.WriteLine("Digite o número da Conta: ");
                         numero = Convert.ToInt32(Console.ReadLine());
 
-                        contas.Deletar(numero);
+                        Console.WriteLine("Digite o valor do saque: ");
+                        valor = Convert.ToInt32(Console.ReadLine());
+
+                        contas.Sacar(numero, valor);
+
 
                         KeyPress();
                         break;
@@ -215,6 +224,14 @@ namespace ContaBancaria
                         Console.WriteLine("Depósito\n\n");
                         Console.ResetColor();
 
+                        Console.WriteLine("Digite o número da conta: ");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o valor do depósito: ");
+                        valor = Convert.ToInt32(Console.ReadLine());
+
+                        contas.Depositar(numero, valor);
+
                         KeyPress();
                         break;
 
@@ -222,6 +239,17 @@ namespace ContaBancaria
                         Console.ForegroundColor = ConsoleColor.DarkCyan;
                         Console.WriteLine("Transferência entre Contas\n\n");
                         Console.ResetColor();
+
+                        Console.WriteLine("Digite o número da Conta Origem: ");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o número da Conta Destino: ");
+                        numeroDestino = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o valor da transferência: ");
+                        valor = Convert.ToInt32(Console.ReadLine());
+
+                        contas.Transferir(numero, numeroDestino, valor);
 
                         KeyPress();
                         break;
@@ -243,7 +271,7 @@ namespace ContaBancaria
             Console.WriteLine("\n*********************************************************");
             Console.WriteLine("Projeto Desenvolvido por: Victor Paliari.");
             Console.WriteLine("Victor - victorrpaliari@gmail.com");
-            Console.WriteLine("github.com/https://github.com/victorpaliari");
+            Console.WriteLine("github.com/victorpaliari");
             Console.WriteLine("*********************************************************");
 
         }

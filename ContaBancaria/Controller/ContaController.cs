@@ -65,10 +65,6 @@ namespace ContaBancaria.Controller
         }
 
 
-        public void Depositar(int numero, decimal valor)
-        {
-            throw new NotImplementedException();
-        }
 
 
         public void ProcurarPorNumero(int numero)
@@ -87,14 +83,55 @@ namespace ContaBancaria.Controller
             
         }
 
+        //Métodos Bancários
         public void Sacar(int numero, decimal valor)
         {
-            throw new NotImplementedException();
+            var conta = BuscarNaCollection(numero);
+            if (conta != null)
+            {
+               if(conta.Sacar(valor) == true)
+                    Console.WriteLine($"\n O saque de R${valor} na conta Nº {numero} foi efetuado com sucesso");
+            }
+            else
+            {
+                Console.WriteLine($"\n A conta Nº {numero} não foi encontrada");
+                Console.ResetColor();
+            }
+        }
+        public void Depositar(int numero, decimal valor)
+        {
+            var conta = BuscarNaCollection(numero);
+            if (conta != null)
+            {
+                conta.Depositar(valor);
+                Console.WriteLine($"\n O depósito de R${valor} na conta Nº {numero} foi efetuado com sucesso");
+            }
+            else
+            {
+                Console.WriteLine($"\n A conta Nº {numero} não foi encontrada");
+                Console.ResetColor();
+            }
         }
 
         public void Transferir(int numeroOrigem, int numeroDestino, decimal valor)
         {
-            throw new NotImplementedException();
+            var contaOrigem = BuscarNaCollection(numeroOrigem);
+            var contaDestino = BuscarNaCollection(numeroDestino);
+
+            if (contaOrigem != null && contaDestino != null)
+            {
+                if (contaOrigem.Sacar(valor) == true)
+                {
+                    contaDestino.Depositar(valor);
+                    Console.WriteLine($"\n A transferência de R${valor} na conta Nº {numero} foi efetuada com sucesso");
+                }
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\n Conta Origem e/ou Conta Destino não foi encontrada");
+                Console.ResetColor();
+            }
         }
 
         //Métodos auxiliares
