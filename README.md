@@ -1,6 +1,8 @@
 # contabancaria
 Projeto Integrador - Módulo I Bootcamp Generation - FullStack Jr Developer
 
+<p align="center">
+<img height="300em" src="https://github.com/victorpaliari/contabancaria/blob/main/contabancaria_foto.png"/>
 
 
 
