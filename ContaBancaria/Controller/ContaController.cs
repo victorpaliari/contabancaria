@@ -47,7 +47,7 @@ namespace ContaBancaria.Controller
         }
 
 
-    public void Deletar(int numero)
+        public void Deletar(int numero)
         {
             var conta = BuscarNaCollection(numero);
 
@@ -64,23 +64,65 @@ namespace ContaBancaria.Controller
             }
         }
 
+        public void MudarBackground()
+        {
+            Console.WriteLine("Mudar a cor do plano de fundo");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("1 - Amarelo");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("2 - Vermelho");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("3 - Verde");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("4 - Azul");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("5 - Magenta");
+            Console.ResetColor();
+
+            int opcao = 0;
+
+            opcao = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case 2:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case 3:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case 4:
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case 5:
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+
+            }
+        }
+
 
 
 
         public void ProcurarPorNumero(int numero)
         {
             var conta = BuscarNaCollection(numero);
-                if (conta != null)
+            if (conta != null)
                 conta.Visualizar();
-                else
+            else
             {
                 Console.WriteLine($"\n A conta Nº {numero} não foi encontrada");
                 Console.ResetColor();
             }
 
-            
 
-            
+
+
         }
 
         //Métodos Bancários
@@ -89,7 +131,7 @@ namespace ContaBancaria.Controller
             var conta = BuscarNaCollection(numero);
             if (conta != null)
             {
-               if(conta.Sacar(valor) == true)
+                if (conta.Sacar(valor) == true)
                     Console.WriteLine($"\n O saque de R${valor} na conta Nº {numero} foi efetuado com sucesso");
             }
             else

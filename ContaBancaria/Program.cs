@@ -17,12 +17,6 @@ namespace ContaBancaria
 
             Console.WriteLine("\nCriar Contas\n");
 
-            ContaCorrente cc1 = new(contas.GerarNumero(), 123, 1, "Vivian", 20000000M, 100.0M);
-            contas.Cadastrar(cc1);
-
-            ContaCorrente cc2 = new(contas.GerarNumero(), 124, 1, "Claudiane", 20000000M, 100.0M);
-            contas.Cadastrar(cc2);
-
             ContaPoupanca cp1 = new(contas.GerarNumero(), 125, 2, "Mayara", 20000000M, 12);
             contas.Cadastrar(cp1);
 
@@ -33,8 +27,8 @@ namespace ContaBancaria
 
             while (true)
             {
-                Console.BackgroundColor = ConsoleColor.DarkCyan;
-                Console.ForegroundColor = ConsoleColor.White;
+                //Console.BackgroundColor = ConsoleColor.DarkCyan;
+                ;// Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("*****************************************************");
                 Console.WriteLine("                                                     ");
                 Console.WriteLine("                   BANCO VIBANK                      ");
@@ -63,7 +57,7 @@ namespace ContaBancaria
                 {
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("\nBanco Seguro - Você seguro.");
+                    Console.WriteLine("\nVIBANK - Nosso banco.");
                     Sobre();
                     Console.ResetColor();
                     System.Environment.Exit(0);
@@ -87,6 +81,8 @@ namespace ContaBancaria
                         do
                         {
                             Console.WriteLine("Digite o Tipo da Conta: ");
+                            Console.WriteLine("1- Conta Corrente");
+                            Console.WriteLine("2- Conta Poupança");
                             tipo = Convert.ToInt32(Console.ReadLine());
                         } while (tipo != 1 && tipo != 2);
 
@@ -261,6 +257,15 @@ namespace ContaBancaria
 
                         KeyPress();
                         break;
+
+                    case 10:
+                        contas.MudarBackground();
+                        KeyPress();
+                        break;
+
+
+
+
                 }
             }
         }
