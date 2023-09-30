@@ -1,14 +1,22 @@
 # contabancaria
 Projeto Integrador - Módulo I Bootcamp Generation - FullStack Jr Developer
-
+<br>
+<br>
 <p align="center">
-<img height="300em" src="https://github.com/victorpaliari/contabancaria/blob/main/contabancaria_foto.png"/>
+<img height="350em" src="https://github.com/victorpaliari/contabancaria/blob/main/_79e51ff5-b5f7-49b2-bc19-19228f1c7b31.jpeg"/>
+   &nbsp; &nbsp; &nbsp; &nbsp;
+   <br>
+</p>
 
 
 
 Este é um projeto que simula um sistema bancário simples em C#. Os usuários podem realizar operações bancárias básicas, como consulta de saldo, saques e depósitos. O sistema inclui classes para diferentes tipos de contas, como Conta Corrente e Conta Poupança, com funcionalidades específicas para cada uma delas.
 
 ## Funcionalidades Principais
+<br>
+<br>
+<p align="center">
+<img height="300em" src="https://github.com/victorpaliari/contabancaria/blob/main/contabancaria_foto.png">
 
 - Consulta de saldo
 - Saque de dinheiro
